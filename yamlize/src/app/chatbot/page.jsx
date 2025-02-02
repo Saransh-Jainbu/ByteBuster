@@ -1,7 +1,7 @@
 "use client"; // Add this directive for client-side functionality
 
 import { useState, useRef, useEffect } from "react";
-import { fetchBackendResponse } from "../utils/fetchBackendResponse";
+// import { fetchBackendResponse } from "../utils/fetchBackendResponse";
 
 export default function ChatbotPage() {
   const [messages, setMessages] = useState([]); // Stores the conversation history
@@ -25,40 +25,39 @@ export default function ChatbotPage() {
     // Clear input
     setInput("");
 
-    // Set loading state to true while waiting for response
+    // Alert the user about the temporary service unavailability
+    alert("This service is temporarily disabled due to monetary issues.");
+
+    // Add a message to inform the user in the chat interface
+    const botMessage = {
+      text: "This service is temporarily disabled due to monetary issues.",
+      sender: "bot",
+    };
+    setMessages([...updatedMessages, botMessage]);
+
+    // Commented out the fetching response part
+    /*
     setIsLoading(true);
-
     const botResponse = await fetchBackendResponse(input, updatedMessages);
-
-    // Set loading state to false once the response is received
     setIsLoading(false);
-
-    // Add bot response to the chat history
     const botMessage = { text: botResponse, sender: "bot" };
     setMessages([...updatedMessages, botMessage]);
+    */
   };
 
   const handleCopy = (text) => {
-    // Create a temporary textarea to store the text
     const textarea = document.createElement("textarea");
-    textarea.value = text; // Assign the exact text with formatting
+    textarea.value = text;
     document.body.appendChild(textarea);
-
-    // Select and copy the text
     textarea.select();
     document.execCommand("copy");
-
-    // Remove the textarea
     document.body.removeChild(textarea);
-
     alert("Copied to clipboard!");
   };
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-black text-white rounded-lg shadow-md">
       <div className="h-[600px] w-[600px] overflow-y-auto mb-4 space-y-4">
-        {" "}
-        {/* Increased height here */}
         {messages.map((msg, index) => (
           <div
             key={index}
@@ -73,11 +72,9 @@ export default function ChatbotPage() {
             </strong>
             {msg.sender === "bot" ? (
               <div>
-                {/* Display YAML code block for bot responses */}
                 <pre className="bg-gray-800 p-4 rounded-md overflow-x-auto text-sm text-white">
-                  <code>{` \n${msg.text}\n `}</code>
+                  <code>{`\n${msg.text}\n`}</code>
                 </pre>
-                {/* Copy button for YAML response */}
                 <button
                   onClick={() => handleCopy(msg.text)}
                   className="mt-2 text-sm text-gray-400 hover:underline"
@@ -91,7 +88,7 @@ export default function ChatbotPage() {
           </div>
         ))}
         {isLoading && (
-          <div className="p-4 text-center text-gray-500">Loading...</div> // Display loading text or spinner
+          <div className="p-4 text-center text-gray-500">Loading...</div>
         )}
         <div ref={messagesEndRef}></div>
       </div>
