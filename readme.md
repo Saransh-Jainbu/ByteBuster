@@ -1,58 +1,68 @@
 # Spheron YAML (ICL) Generator
 
-## Demo
+## 🚀 Demo
 
 We have temporarily disabled the chatbot feature due to monetary constraints. However, you can check out our demo video showcasing the project:
 
-[Google Drive Demo Link](https://drive.google.com/drive/folders/17PXAFSUd2G_1uTZ9R6-0ScDzPVnAaoXi)
+📹 [Google Drive Demo Link](https://drive.google.com/drive/folders/17PXAFSUd2G_1uTZ9R6-0ScDzPVnAaoXi)
 
-## Google Colab Notebook
+## 📖 Pitch Deck
 
-To verify our work and understand our implementation, you can check our Google Colab notebook:
+For a detailed understanding of our product and approach, you can view our pitch presentation:
 
-[Colab Notebook](https://colab.research.google.com/drive/1EmNPYj16DwusqdVbgIkQVPn88Tk4SmKM?usp=sharing)
+📑 [Pitch PPT PDF](https://drive.google.com/file/d/15TWttzczYg7LztmUszgJ40Qu26441xHE/view?usp=sharing)
 
-## Overview
+## 🔬 Google Colab Notebook
 
-Spheron uses an Infrastructure Composition Language (ICL) in YAML to define and manage deployments. Writing YAML configurations manually can be cumbersome for developers, requiring them to memorize keys, properties, and structures. This project automates YAML generation to streamline the deployment process and make it more user-friendly.
+To verify our work and explore the implementation, check out our Google Colab notebook:
 
-## Goal
+📝 [Colab Notebook](https://colab.research.google.com/drive/1EmNPYj16DwusqdVbgIkQVPn88Tk4SmKM?usp=sharing)
+
+---
+
+## 🌟 Overview
+
+Spheron uses an Infrastructure Composition Language (ICL) in YAML to define and manage deployments. Writing YAML configurations manually can be tedious, requiring developers to memorize keys, properties, and structures. This project automates YAML generation, making the deployment process seamless and user-friendly.
+
+## 🎯 Goal
 
 Automate YAML generation using Retrieval-Augmented Generation (RAG) and FAISS.
 
-## Output
+## ✅ Output
 
-Valid YAML configuration.
+A valid YAML configuration tailored to the user's needs.
 
-## Key Components
+## 🔑 Key Components
 
-- **FAISS**: For semantic search.
-- **RAG**: For context-aware YAML generation.
+- **FAISS**: Enables fast and efficient semantic search.
+- **RAG**: Ensures context-aware YAML generation.
 
-## Technical Architecture
+## 🛠️ Technical Architecture
 
-1. Load and process ICL documentation into chunks.
-2. Build FAISS index for efficient similarity search.
+1. Load and process ICL documentation into manageable chunks.
+2. Build a FAISS index for efficient similarity search.
 3. Generate embeddings using Sentence Transformers.
 4. Retrieve relevant chunks using FAISS.
 5. Generate YAML using DeepSeek-Coder-1.3B.
-6. Validate the generated YAML.
+6. Validate the generated YAML for correctness and compliance.
 
-## Features
+## ✨ Features
 
-- **Automated YAML Generation**: Eliminates the need for developers to write YAML manually.
-- **Validation & Error Prevention**: Ensures that the generated YAML adheres to Spheron’s ICL specifications, preventing misconfigurations.
-- **Easy Iterations**: Allows users to refine or regenerate YAML configurations.
+- **Automated YAML Generation**: Eliminates the need for manual YAML writing.
+- **Validation & Error Prevention**: Ensures compliance with Spheron’s ICL specifications, preventing misconfigurations.
+- **Easy Iterations**: Users can refine or regenerate YAML configurations with ease.
 
-## Tech Stack
+## 🏗️ Tech Stack
 
 - **Frontend**: Next.js (React-based framework for fast and scalable web applications)
-- **Backend**: DeepSeek-Coder-1.3B for YAML generation
+- **Backend**: DeepSeek-Coder-1.3B for intelligent YAML generation
 - **Storage**: FAISS for efficient similarity search and retrieval
-- **NLP & Embeddings**: Sentence Transformers for context-aware processing
-- **Validation**: Custom validation logic to ensure YAML correctness and prevent syntax errors
+- **NLP & Embeddings**: Sentence Transformers for contextual understanding
+- **Validation**: Custom logic to ensure YAML correctness and prevent syntax errors
 
-## Installation & Setup
+---
+
+## 📌 Installation & Setup
 
 ### Prerequisites
 
@@ -64,7 +74,7 @@ Valid YAML configuration.
 1. Clone the repository:
    ```sh
    git clone https://github.com/your-repo/spheron-icl-generator.git
-   cd ByteBuster/yamlize/
+   cd spheron-icl-generator
    ```
 2. Install dependencies:
    ```sh
@@ -76,16 +86,18 @@ Valid YAML configuration.
    ```
 4. Open `http://localhost:3000` in your browser.
 
-## Expected Outcomes
+---
 
-- **Faster onboarding** for developers who no longer need to learn Spheron ICL syntax manually.
-- **Improved efficiency** by reducing time spent on YAML configuration.
-- **Error-free configurations** through real-time validation and iteration.
+## 🎯 Expected Outcomes
 
-## Contribution
+- **Faster onboarding**: Developers no longer need to manually learn Spheron ICL syntax.
+- **Enhanced efficiency**: Reduces the time spent on YAML configuration.
+- **Error-free deployment**: Ensures correct and validated YAML outputs.
 
-Contributions are welcome! Feel free to submit issues or pull requests.
+## 🤝 Contribution
 
-## License
+We welcome contributions! Feel free to submit issues or pull requests to improve the project.
 
-MIT License
+## 📜 License
+
+This project is licensed under the **MIT License**.
