@@ -4,7 +4,13 @@
 
 We have temporarily disabled the chatbot feature due to monetary constraints. However, you can check out our demo video showcasing the project:
 
-[![Watch the demo](https://drive.google.com/drive/folders/17PXAFSUd2G_1uTZ9R6-0ScDzPVnAaoXi)
+[Google Drive Demo Link](https://drive.google.com/drive/folders/17PXAFSUd2G_1uTZ9R6-0ScDzPVnAaoXi)
+
+## Google Colab Notebook
+
+To verify our work and understand our implementation, you can check our Google Colab notebook:
+
+[Colab Notebook](https://colab.research.google.com/drive/1EmNPYj16DwusqdVbgIkQVPn88Tk4SmKM?usp=sharing)
 
 ## Overview
 
@@ -58,7 +64,7 @@ Valid YAML configuration.
 1. Clone the repository:
    ```sh
    git clone https://github.com/your-repo/spheron-icl-generator.git
-   cd spheron-icl-generator
+   cd ByteBuster/yamlize/
    ```
 2. Install dependencies:
    ```sh
